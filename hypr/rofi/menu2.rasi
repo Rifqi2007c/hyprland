@@ -9,7 +9,7 @@ configuration {
 
 }
 
-@import "~/.config/bspwm/themes/bspwm_pac/rofi/colors.rasi"
+@import "~/.config/hypr/rofi/colors.rasi"
 
 * {
 	font: "0xProto Bold 10";
