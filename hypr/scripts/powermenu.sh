@@ -9,7 +9,6 @@ chosen=$(printf "   \n   ⏻Shutdown\n󰜉Reboo
 
 case "$chosen" in
 
-"   ") killall rofi ;;
 "⏻Shutdown") poweroff ;;
 "󰜉Reboot") reboot ;;
 "󰗼Logout") hyprctl dispatch exit ;;
