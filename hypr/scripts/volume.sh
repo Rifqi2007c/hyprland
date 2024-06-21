@@ -44,12 +44,6 @@ function send_notification {
 
 }
 
-# set default variables
-
-icodir="$HOME/.config/bspwm/themes/bspwm_pac/dunst/vol"
-shift $((OPTIND - 1))
-step="${2:-5}"
-
 case $1 in
 up)
 	# Set the volume on (if it was muted)
