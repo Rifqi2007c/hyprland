@@ -4,5 +4,5 @@
  - sttt https://github.com/flick0/sttt
 
 ## pywal on waybar not work?
-go to ~/.config/waybar/style.css and you will find this line -> @import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
+edit style.css in ~/.config/waybar/style.css and you will find this line -> @import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
 - change /rifqi/ into your username
