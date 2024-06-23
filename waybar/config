@@ -42,18 +42,18 @@
     },
 
     "hyprland/window": {
-        "format": "{}",
+        "format": "> {}",
         "rotate": 0,
         "separate-outputs": true,
         "rewrite": {
             "${USER}@${set_sysname}:(.*)": "$1  ",
             "(.*) — Mozilla Firefox": "$1 󰈹 ",
-            "(.*)Mozilla Firefox": "Firefox 󰈹 ",
+            "(.*)Mozilla Firefox": "> Firefox 󰈹 ",
             "(.*) - Visual Studio Code": "$1 󰨞 ",
-            "(.*)Visual Studio Code": "Code 󰨞 ",
+            "(.*)Visual Studio Code": "> Code 󰨞 ",
             "(.*) — Dolphin": "$1 󰉋 ",
-            "(.*)Spotify": "Spotify 󰓇 ",
-            "(.*)Steam": "Steam 󰓓 "
+            "(.*)Spotify": "> Spotify 󰓇 ",
+            "(.*)Steam": "> Steam 󰓓 "
         },
         "max-length": 200
     },
@@ -64,28 +64,6 @@
         "exec": "echo ; echo  logout",
         "on-click": "~/.config/hypr/scripts/powermenu.sh",
         "interval" : 86400, // once every day
-        "tooltip": true
-    },
-
-    "custom/cliphist": {
-        "format": "{}",
-        "rotate": 0,
-        "exec": "echo ; echo 󰅇 clipboard history",
-        "on-click": "sleep 0.1 && cliphist.sh c",
-        "on-click-right": "sleep 0.1 && cliphist.sh d",
-        "on-click-middle": "sleep 0.1 && cliphist.sh w",
-        "interval" : 86400, // once every day
-        "tooltip": true
-    },
-
-    "custom/wbar": {
-        "format": "{}", //    //
-        "rotate": 0,
-        "exec": "echo ; echo  switch bar //  dock",
-        "on-click": "wbarconfgen.sh n",
-        "on-click-right": "wbarconfgen.sh p",
-        "on-click-middle": "sleep 0.1 && quickapps.sh kitty firefox spotify code dolphin",
-        "interval" : 86400,
         "tooltip": true
     },
 
@@ -107,31 +85,6 @@
 		}
 	},
 
-    "custom/updates": {
-        "exec": "systemupdate.sh",
-        "return-type": "json",
-        "format": "{}",
-        "rotate": 0,
-        "on-click": "hyprctl dispatch exec 'systemupdate.sh up'",
-        "interval": 86400, // once every day
-        "tooltip": true,
-        "signal": 20,
-    },
-
-    "custom/spotify": {
-        "exec": "mediaplayer.py --player spotify",
-        "format": " {}",
-        "rotate": 0,
-        "return-type": "json",
-        "on-click": "playerctl play-pause --player spotify",
-        "on-click-right": "playerctl next --player spotify",
-        "on-click-middle": "playerctl previous --player spotify",
-        "on-scroll-up": "volumecontrol.sh -p spotify i",
-        "on-scroll-down": "volumecontrol.sh -p spotify d",
-        "max-length": 25,
-        "escape": true,
-        "tooltip": true
-    },
 
     "custom/m_pre": {
         "format": "󰒮",
@@ -228,11 +181,6 @@
         "scroll-step": 5
     },
 
-    "custom/keybindhint": {
-        "format": " ",
-        "rotate": 0,
-        "on-click": "keybinds_hint.sh"
-    },
 
     "cpu": {
         "interval": 10,
@@ -260,38 +208,7 @@
         "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
     },
 
-    "custom/cpuinfo": {
-        "exec": " cpuinfo.sh",
-        "return-type": "json",
-        "format": "{}",
-        "rotate": 0,
-        "interval": 5, // once every 5 seconds
-        "tooltip": true,
-        "max-length": 1000
-    },
-
-    "custom/gpuinfo": {
-        "exec": " gpuinfo.sh",
-        "return-type": "json",
-        "format": "{}",
-        "rotate": 0,
-        "interval": 5, // once every 5 seconds
-        "tooltip": true,
-        "max-length": 1000,
-        "on-click": "gpuinfo.sh --toggle",
-    },
-
-    "custom/gpuinfo#nvidia": {
-        "exec": " gpuinfo.sh --use nvidia ",
-        "return-type": "json",
-        "format": "{}",
-        "rotate": 0,
-        "interval": 5, // once every 5 seconds
-        "tooltip": true,
-        "max-length": 1000,
-    },
  
-
     "disk": {
     "interval": 30,
     "format": " {percentage_free}%",
