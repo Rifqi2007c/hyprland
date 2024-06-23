@@ -6,3 +6,6 @@
 ## pywal on waybar not work?
 edit style.css in ~/.config/waybar/style.css and you will find this line -> @import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
 - change /rifqi/ into your username
+## waybar color change but the color is not what you see in the preview?
+- generate wallpaper color config with this command -> wal -i ~/.config/hypr/wallpapers/phony.jpg -s (you can find all the wallpaper in hypr directory)
+- generated color config can be found in ~/.cache/wal/schemes. edit it and change color0 into the right color (you can find color that was used in ~/.config/waybar/color.css)
