@@ -1,5 +1,5 @@
 # Preview
-![alt text](https://github.com/Rifqi2007c/hyprland/blob/main/20240624_20h23m42s_grim.png)
+![alt text](https://github.com/Rifqi2007c/hyprland/blob/main/20240624_20h30m28s_grim.png)
 https://youtu.be/-Fp7HCDIeWk
 
 # requirement (Im on arch base distro - endeavoros)
