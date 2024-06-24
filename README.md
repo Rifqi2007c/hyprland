@@ -3,7 +3,7 @@
 https://youtu.be/-Fp7HCDIeWk
 
 # requirement (Im on arch base distro - endeavoros)
- - sudo pacman -S hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-0xproto-nerd libnotify starship python-pywal grim slurp
+ - sudo pacman -S hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp
  - yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
  - sttt https://github.com/flick0/sttt
  - set fish as default shell
