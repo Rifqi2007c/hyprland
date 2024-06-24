@@ -1,0 +1,148 @@
+// Config //
+configuration {
+    modi:                        "drun,filebrowser,window,run";
+    show-icons:                  true;
+    display-drun:                "Run";
+    display-run:                 "Command";
+    display-filebrowser:         "File";
+    display-window:              "Activity";
+    drun-display-format:         "{name}";
+    window-format:               "{w}{t}";
+    font:                        "0xProto 10";
+    icon-theme:                  "Tela-circle-dracula";
+}
+
+@theme "~/.config/bspwm/themes/bspwm_pac/rofi/colors.rasi"
+
+
+// Main //
+window {
+    height:                      33em;
+    width:                       63em;
+    transparency:                "real";
+    fullscreen:                  false;
+    enabled:                     true;
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border: 3;
+    border-color:               #d6d1ff;
+    background-color:            @bg;
+}
+mainbox {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0em;
+    orientation:                 horizontal;
+    children:                    [ "dummywall" , "listbox" ];
+    background-color:            transparent;
+}
+dummywall {
+    spacing:                     0em;
+    padding:                     0em;
+    width:                       37em;
+    expand:                      false;
+    orientation:                 vertical;
+    children:                    [ "mode-switcher" , "dummy" , "inputbar" ];
+    background-color:            transparent;
+    background-image:            url("~/.config/bspwm/themes/bspwm_pac/wallpapers/phony.jpg", height);
+}
+
+
+// Modes //
+mode-switcher{
+    orientation:                 horizontal;
+    enabled:                     true;
+    width:                       60em;
+    padding:                     1em 1em 1em 1em;
+    spacing:                     1em;
+    background-color:            transparent;
+}
+button {
+    cursor:                      pointer;
+    border-radius:               2em;
+    background-color:            @bg;
+    text-color:                  @fg;
+}
+button selected {
+    background-color:            @fg;
+    text-color:                  @bg;
+}
+
+
+// Inputs //
+inputbar {
+    enabled:                     true;
+    children:                    [ "entry" , "dummy" ];
+    background-color:            transparent;
+    padding: 0em 0em 0.5em 0em;
+}
+
+entry {
+    border-radius:               0em;
+    enabled:                     true;
+    spacing:                     1em;
+    padding:                     1em;
+    text-color:                  @fg;
+    background-color:            @bg;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+
+// Lists //
+listbox {
+    spacing:                     0em;
+    padding:                     2em;
+    children:                    [ "dummy" , "listview" , "dummy" ];
+    background-color:            transparent;
+}
+listview {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0em;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    expand:                      false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+dummy {
+    background-color:            transparent;
+}
+
+
+// Elements //
+element {
+    enabled:                     true;
+    spacing:                     0.8em;
+    padding:                     0.4em 0.4em 0.4em 1.5em;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+element selected.normal {
+    background-color:            @fg;
+    text-color:                  @bg;
+    border-radius: 9;
+}
+element-icon {
+    size:                        2.8em;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}

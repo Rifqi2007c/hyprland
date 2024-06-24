@@ -1,0 +1,15 @@
+@define-color bar-bg rgba(0, 0, 0, 0);
+
+@define-color bg #24273a;
+@define-color fg #cad3f5;
+
+@define-color black #363a4f;
+@define-color red #E78284;
+@define-color green #A6D189;
+@define-color yellow #E4C890;
+@define-color blue #8CAAEE;
+@define-color pink #DF95A5;
+@define-color magenta #F4B8E4;
+@define-color purple #bb9af7;
+@define-color cyan #81C8Be;
+@define-color white #e1e7fc;
