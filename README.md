@@ -6,7 +6,9 @@
  - sttt https://github.com/flick0/sttt
  - (optional) > firefox neovim ranger spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
    - lazyvim http://www.lazyvim.org/ (if you use neovim)
-
+## if script didn't work
+ - run the chmod.sh scripts (> bash chmod.sh )
+ - or you can do things manually (> chmod +x powermenu.sh)(script can be found in hypr/scripts and waybar/scripts)
 ## waybar pywal not work?
 edit style.css in ~/.config/waybar/style.css and you will find this line -> @import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
 - change /rifqi/ into your username
