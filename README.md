@@ -3,7 +3,7 @@
  - yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
  - sttt https://github.com/flick0/sttt
  - lazyvim http://www.lazyvim.org/
- - (optional) > firefox neovim ranger spotify (the waybar medialayer only work with spotify but you can change that ofcourse)
+ - (optional) > firefox neovim ranger spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
 
 ## waybar pywal not work?
 edit style.css in ~/.config/waybar/style.css and you will find this line -> @import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
