@@ -1,6 +1,7 @@
 # requirement (Im on arch base distro - endeavoros)
- - sudo pacman -S hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish ranger nwg-look neovim foot ttf-0xproto-nerd slurp grim libnotify starship python-pywal
- - yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato 
+ - sudo pacman -S hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-0xproto-nerd slurp grim libnotify starship python-pywal
+ - yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
+ - (otional) > sudo pacman firefox neovim ranger
  - sttt https://github.com/flick0/sttt
  - lazyvim http://www.lazyvim.org/
 
