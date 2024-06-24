@@ -6,7 +6,7 @@
  - sttt https://github.com/flick0/sttt
  - (optional) > firefox neovim ranger spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
    - lazyvim http://www.lazyvim.org/ (if you use neovim)
-## if script didn't work
+## if script didn't work (like powermenu button didn't work)
  - run the chmod.sh scripts (> bash chmod.sh )
  - or you can do things manually (> chmod +x powermenu.sh)(script can be found in hypr/scripts and waybar/scripts)
 ## waybar pywal not work?
