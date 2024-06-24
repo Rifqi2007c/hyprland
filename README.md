@@ -7,7 +7,7 @@ https://youtu.be/-Fp7HCDIeWk
  - yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
  - sttt https://github.com/flick0/sttt
  - set fish as default shell
- - (optional) > firefox neovim ranger spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
+ - (optional) > firefox neovim ranger ripdrag libsixel spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
    - lazyvim http://www.lazyvim.org/ (if you use neovim)
 ## if script didn't work (like powermenu button didn't work)
  - run the chmod.sh scripts ( > bash chmod.sh )
