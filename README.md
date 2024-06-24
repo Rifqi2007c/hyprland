@@ -1,5 +1,5 @@
 # Preview
-(https://youtu.be/-Fp7HCDIeWk)
+[![watch the video](https://github.com/Rifqi2007c/hyprland/blob/main/20240624_20h23m42s_grim.png)](https://youtu.be/-Fp7HCDIeWk)
 
 # requirement (Im on arch base distro - endeavoros)
  - sudo pacman -S hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-0xproto-nerd libnotify starship python-pywal grim slurp
