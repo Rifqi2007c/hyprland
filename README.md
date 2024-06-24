@@ -15,8 +15,8 @@ edit style.css in ~/.config/waybar/style.css and you will find this line -> @imp
 - generated color config can be found in ~/.cache/wal/schemes. edit it and change color0 into the right color (you can find color that was used in ~/.config/waybar/color.css)
 # changing theme/icon/cursor
 - use GTK Settings(nwg-look)
- - Widget: catppuccin-machiato-mauve-standard+default
- - default font: 0xProto Nerd Font Regular
- - color scheme: prefer dark
- - Icon: Tela Circle dracula dark
- - Cursor: Vimix Cursor - White
+  - Widget: catppuccin-machiato-mauve-standard+default
+  - default font: 0xProto Nerd Font Regular
+  - color scheme: prefer dark
+  - Icon: Tela Circle dracula dark
+  - Cursor: Vimix Cursor - White
