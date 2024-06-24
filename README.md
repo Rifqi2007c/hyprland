@@ -16,7 +16,7 @@ edit style.css in ~/.config/waybar/style.css and you will find this line -> @imp
 # changing theme/icon/cursor
 - use GTK Settings(nwg-look)
  - Widget: catppuccin-machiato-mauve-standard+default
- - default font: 0xProto Nerd Font Regular (size: 11)
+ - default font: 0xProto Nerd Font Regular
  - color scheme: prefer dark
  - Icon: Tela Circle dracula dark
  - Cursor: Vimix Cursor - White
