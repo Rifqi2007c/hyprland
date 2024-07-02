@@ -16,8 +16,11 @@ sudo pacman -S hyprland waybar network-manager-applet dunst rofi pavucontrol ima
  - (optional) > firefox neovim ranger ripdrag libsixel spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
    - lazyvim http://www.lazyvim.org/ (if you use neovim)
 ## if script didn't work (like powermenu button didn't work)
- - run the chmod.sh scripts ( > bash chmod.sh )
- - or you can do things manually ( > chmod +x <.sh> ) (all the used script can be found in hypr/scripts and waybar/scripts)
+- cd into ~/.config/hypr/scripts and chmod everything
+```
+cd ~/.config/hypr/scripts
+chmod +x 
+```
 ## waybar pywal not work?
 edit style.css in ~/.config/waybar/style.css and you will find this line -> @import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
 - change /rifqi/ into your username
