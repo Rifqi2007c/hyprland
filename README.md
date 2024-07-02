@@ -1,5 +1,5 @@
 # Preview
-![[20240702_22h52m26s_grim.png]]
+![alt text](https://github.com/Rifqi2007c/hyprland/blob/main/asset/20240702_22h52m26s_grim.png)
 
 # requirement (Im on arch base distro - endeavoros)
  - package installer
