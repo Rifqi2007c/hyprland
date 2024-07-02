@@ -7,8 +7,11 @@ https://youtu.be/-Fp7HCDIeWk
 ```
 sudo pacman -S hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp
 ```
-- yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
- - sttt https://github.com/flick0/sttt
+- AUR helper
+```
+-  yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
+```
+- sttt https://github.com/flick0/sttt
  - set fish as default shell
  - (optional) > firefox neovim ranger ripdrag libsixel spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
    - lazyvim http://www.lazyvim.org/ (if you use neovim)
