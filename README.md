@@ -18,13 +18,7 @@ yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppu
 - cd into ~/.config/hypr/scripts and chmod everything
 ```
 cd ~/.config/hypr/scripts
-chmod +x ~/.config/hypr/scripts/volume.sh
-chmod +x ~/.config/hypr/scripts/waybar.sh
-chmod +x ~/.config/hypr/scripts/gamemode.sh
-chmod +x ~/.config/hypr/scripts/powermenu.sh
-chmod +x ~/.config/hypr/scripts/wallselect.sh
-chmod +x ~/.config/hypr/scripts/notify-send.sh
-chmod +x ~/.config/hypr/scripts/cava.sh
+chmod +x cava.sh gamemode.sh notify-send.sh powermenu.sh volume.sh wallselect.sh waybar.sh
 ```
 ## waybar pywal not work?
 pywal will not work out of the box here a way to fix this
