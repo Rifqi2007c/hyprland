@@ -14,6 +14,7 @@ yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppu
  - set fish as default shell
  - (optional) > firefox neovim ranger ripdrag libsixel spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
    - lazyvim http://www.lazyvim.org/ (if you use neovim)
+   - ![my custom neofetch](https://github.com/Rifqi2007c/neofetch-custom)
 ## if script didn't work (like powermenu button didn't work)
 - cd into ~/.config/hypr/scripts and chmod everything
 ```
