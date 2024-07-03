@@ -33,7 +33,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    background: #d6d1ff;
+    background: linear-gradient(45deg, rgba(202,158,230,1) 0%, rgba(245,194,231,1) 43%, rgba(180,190,254,1) 80%, rgba(137,180,250,1) 100%);
     color: @bg;
     padding-left: 5px;
     padding-right: 10px;
