@@ -27,11 +27,29 @@ chmod +x ~/.config/hypr/scripts/notify-send.sh
 chmod +x ~/.config/hypr/scripts/cava.sh
 ```
 ## waybar pywal not work?
-edit style.css in ~/.config/waybar/style.css and you will find this line -> @import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
-- change /rifqi/ into your username
-## waybar color change but the color is not what you see in the preview?
-- generate wallpaper color config with this command -> wal -i ~/.config/hypr/wallpapers/phony.jpg -s (you can find all the wallpaper in hypr directory)
-- generated color config can be found in ~/.cache/wal/schemes. edit it and change color0 into the right color (you can find color that was used in ~/.config/waybar/color.css)
+pywal will not work out of the box here a way to fix this
+- generate pywal color for all the wallpapers first. for example...
+```
+wal -i ~/.config/hypr/wallpapers/phony.jpg -s
+```
+> all the wallpapers can be found inside ~/.config/hypr/wallpapers
+### pywal color correction
+edit color scheme json file that you generate(the file are located in ~/.cache/wal/schemes). change color0 color with these color...
+```
+burning_cherry.jpeg = #E78284
+camera.jpg          = #E4C890
+phony.jpg           = #bb9af7
+relax.jpg           = #81C8Be
+waifu_pink.png      = #DF95A5
+wired.png           = #8CAAEE
+```
+### waybar pywal
+- edit the waybar style.css
+```
+@import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
+```
+change rifqi into your username
+
 # changing theme/icon/cursor
 - use GTK Settings(nwg-look)
   - Widget: catppuccin-machiato-mauve-standard+default
