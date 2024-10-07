@@ -21,7 +21,6 @@ yay -S spotify
 ```
    - ![lazyvim](http://www.lazyvim.org/) (if you use neovim)
    - ![my custom neofetch](https://github.com/Rifqi2007c/neofetch-custom)
-   - 
 - cd into ~/.config/hypr/scripts and chmod +x everything
 ```
 cd ~/.config/hypr/scripts
