@@ -4,19 +4,25 @@
 # requirement (Im on arch base distro - endeavoros)
  - package installer
 ```
-sudo pacman -S waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp
+sudo pacman -S hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp
 ```
 - AUR helper
 ```
-yay -S hyprland-git swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
+yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
 ```
 - sttt https://github.com/flick0/sttt
  - set fish as default shell
- - (optional) > firefox neovim ranger ripdrag libsixel spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
+ - (optional) > thunar neovim libsixel spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
+```
+sudo pacman -S thunar neovim libsixel
+```
+```
+yay -S spotify
+```
    - ![lazyvim](http://www.lazyvim.org/) (if you use neovim)
    - ![my custom neofetch](https://github.com/Rifqi2007c/neofetch-custom)
-## if script didn't work (like powermenu button didn't work)
-- cd into ~/.config/hypr/scripts and chmod everything
+   - 
+- cd into ~/.config/hypr/scripts and chmod +x everything
 ```
 cd ~/.config/hypr/scripts
 chmod +x cava.sh gamemode.sh notify-send.sh powermenu.sh volume.sh wallselect.sh waybar.sh
