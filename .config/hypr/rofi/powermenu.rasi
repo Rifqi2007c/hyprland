@@ -1,0 +1,137 @@
+configuration {
+	display-drun: "";
+	display-clipboard: "";
+	drun-display-format: "{name}";
+	modi: "drun";
+  hover-select: true;
+  me-select-entry:			 "MousePrimary";
+	me-accept-entry:			 "!MousePrimary";
+
+}
+
+@import "~/.config/hypr/rofi/colors.rasi"
+
+* {
+	font: "0xProtoNerdFont Bold 10";
+
+	background-color: @gr;
+	separatorcolor: transparent;
+
+	border: 0;
+	margin: 0;
+	padding: 0;
+	spacing: 0;	
+}
+
+window {
+	width: 170px;
+	height: 186px;
+	border-radius: 9;
+	border: 3;
+  border-color: #d6d1ff;
+	padding: 10;
+	background-color: @bg;
+	x-offset:   856px;        
+	y-offset:   -410px;
+}
+
+mainbox {
+	background-color: @bg;
+	children: [listview];
+	padding: 0;
+}
+
+listview {
+	scrollbar: false;
+	padding: 2 0;
+	background-color: @bg;
+	columns: 1;
+	lines: 7;
+	margin: 8 0 0 0;
+}
+
+
+inputbar {
+	children: [prompt, entry];
+	background-color: @gr;
+	border-radius: 0;
+	margin: 0;
+}
+
+prompt {
+	enabled: false;
+	font: "Symbols Nerd Font 10";
+	background-color: @gr;
+	text-color: @gr2;
+	enabled: true;
+	border-radius: 0;
+	padding: 0;
+
+}
+
+entry {
+	background-color: transparent;
+	text-color: @fg;
+	placeholder-color: @gr2;
+	border-radius: 0;
+	placeholder: "Search...";
+	blink: false;
+	padding: 4;
+}
+
+element {
+	background-color: #43465c;
+	padding: 10;
+	border-radius: 10;
+}
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
+	expand: true;
+	horizontal-align: 0;
+	vertical-align: 0.5;
+}
+
+element-icon {
+	background-color: inherit;
+	text-color: inherit;
+	padding: 0 10 0 0;
+}
+
+element.normal.normal {
+	background-color: @bg;
+	text-color: @fg;
+}
+element.normal.urgent {
+	background-color: @gr;
+	text-color: @fg;
+}
+element.normal.active {
+	background-color: @gr;
+	text-color: @fg;
+}
+element.selected.normal {
+	background-color: @gr;
+	text-color: @fg;
+}
+element.selected.urgent {
+	background-color: @gr;
+	text-color: @fg;
+}
+element.selected.active {
+	background-color: @gr;
+	text-color: @fg;
+}
+element.alternate.normal {
+	background-color: @bg;
+	text-color: @fg;
+}
+element.alternate.urgent {
+	background-color: @bg;
+	text-color: @fg;
+}
+element.alternate.active {
+	background-color: @bg;
+	text-color: @fg;
+}
