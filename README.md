@@ -58,3 +58,9 @@ change rifqi into your username
   - color scheme: prefer dark
   - Icon: Tela Circle dracula dark
   - Cursor: Vimix Cursor - White
+ 
+# extra
+ - [custom firefox css made by me](https://github.com/Rifqi2007c/firefox-css)
+```
+git clone https://github.com/Rifqi2007c/firefox-css.git
+```
