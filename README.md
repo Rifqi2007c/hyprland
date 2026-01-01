@@ -32,17 +32,7 @@ pywal will not work out of the box here a way to fix this
 ```
 wal -i ~/.config/hypr/wallpapers/phony.jpg -s
 ```
-> all the wallpapers can be found inside ~/.config/hypr/wallpapers
-### pywal color correction
-edit color scheme json file that you generate(the file are located in ~/.cache/wal/schemes). change color0 color with these color...
-```
-burning_cherry.jpeg = #E78284
-camera.jpg          = #E4C890
-phony.jpg           = #bb9af7
-relax.jpg           = #81C8Be
-waifu_pink.png      = #DF95A5
-wired.png           = #8CAAEE
-```
+or using wallpaper switcher shortcut `SUPER+w`
 ### waybar pywal
 - edit the waybar style.css
 ```
