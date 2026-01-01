@@ -4,7 +4,7 @@
 # requirement (Im on arch base distro - endeavoros)
  - package installer
 ```
-sudo pacman -S git hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp
+sudo pacman -S git hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp noto-fonts-cjk
 ```
 - AUR helper
 ```
@@ -17,7 +17,7 @@ yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppu
 sudo pacman -S thunar neovim libsixel htop
 ```
 ```
-yay -S spotify peaclock calcurse
+yay -S spotify peaclock calcurse libsixel-git
 ```
    - ![lazyvim](http://www.lazyvim.org/) (if you use neovim)
    - ![my custom neofetch](https://github.com/Rifqi2007c/neofetch-custom)
