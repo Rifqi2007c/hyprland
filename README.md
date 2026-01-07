@@ -1,7 +1,7 @@
 # Preview
 ![alt text](https://github.com/Rifqi2007c/hyprland/blob/main/asset/20240702_22h52m26s_grim.png)
 
-# requirement (Im on arch base distro - endeavoros)
+# requirement (Im on archlinux)
  - package installer
 ```
 sudo pacman -S git hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp noto-fonts-cjk
