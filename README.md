@@ -14,10 +14,10 @@ yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppu
  - set fish as default shell
  - (optional) > thunar neovim libsixel peaclock calcurse htop spotify (the waybar mediaplayer button only work with spotify but you can change that ofcourse)
 ```
-sudo pacman -S thunar neovim libsixel htop
+sudo pacman -S thunar neovim htop
 ```
 ```
-yay -S spotify peaclock calcurse libsixel-git
+yay -S spotify peaclock calcurse libsixel-git libsixel-git
 ```
    - ![lazyvim](http://www.lazyvim.org/) (if you use neovim)
    - ![my custom neofetch](https://github.com/Rifqi2007c/neofetch-custom)
