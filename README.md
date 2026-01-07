@@ -47,6 +47,9 @@ change rifqi into your username
   - color scheme: prefer dark
   - Icon: Tela Circle dracula dark
   - Cursor: Vimix Cursor - White
+
+> must have when using hyprland
+> check: https://wiki.hypr.land/Useful-Utilities/Must-have/
  
 # extra
  - [custom firefox css made by me](https://github.com/Rifqi2007c/firefox-css)
