@@ -1,0 +1,312 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "0xProto Nerd Font";
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 16px;
+}
+
+@import "color.css";
+@import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
+
+window#waybar {
+    background: @color4;
+    border-radius: 14px;
+}
+
+tooltip {
+    background: @bg;
+    color: @fg;
+    border-radius: 5px;
+    border-width: 0px;
+}
+
+#workspaces button {
+    box-shadow: none;
+	text-shadow: none;
+    padding: 0px;
+    border-radius: 9px;
+    padding-right: 3;
+    color: #d6d1ff;
+    animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+    background: linear-gradient(45deg, rgba(202,158,230,1) 0%, rgba(245,194,231,1) 43%, rgba(180,190,254,1) 80%, rgba(137,180,250,1) 100%);
+    color: @bg;
+    padding-left: 5px;
+    padding-right: 10px;
+    margin-bottom: 3px;
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-fg;
+    margin-bottom: 5px;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button {
+    box-shadow: none;
+	text-shadow: none;
+    padding: 0px;
+    border-radius: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-right: 0px;
+    color: @wb-color;
+    animation: tb_normal 20s ease-in-out 1;
+}
+
+#taskbar button.active {
+    background: @wb-act-bg;
+    color: @wb-act-color;
+    margin-left: 2px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-right: 2px;
+    animation: tb_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-color;
+    animation: tb_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#tray menu * {
+    min-height: 16px
+}
+
+#tray menu separator {
+    min-height: 10px
+}
+
+
+#backlight,
+#battery,
+#bluetooth,
+#custom-cliphist,
+#clock,
+#custom-cpuinfo,
+#cpu,
+#custom-gpuinfo,
+#idle_inhibitor,
+#custom-keybindhint,
+#language,
+#memory,
+#mpris,
+#network,
+#custom-notifications,
+#pulseaudio,
+#custom-spotify,
+#taskbar,
+#custom-theme,
+#tray,
+#custom-updates,
+#custom-wbar,
+#workspaces,
+#disk,
+#custom-l_end,
+#custom-r_end,
+#custom-sl_end,
+#custom-sr_end,
+#custom-rl_end,
+#custom-rr_end {
+    color: @fg;
+    background: @bg;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+#disk {
+  color: @magenta
+}
+
+#cpu {
+  color: @cyan;
+}
+
+#clock {
+  color: @cyan;
+}
+
+#memory {
+  color: @yellow;
+}
+
+#custom-m_playpause {
+  color: @green;
+  background: @bg;
+  padding-right: 7px;
+  padding-left: 5px;
+  margin: 3px 0px 3px 0px;
+  font-size: 15px;
+}
+
+#custom-m_next {
+    color: @green;
+    background: @bg;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 16px;
+}
+
+#custom-m_pre {
+    color: @green;
+    background: @bg;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 16px;
+}
+
+#custom-power {
+    color: @red;
+    background: @bg;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+
+#custom-wallchange {
+    color: #d6d1ff;
+    background: @bg;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 3px;
+    padding-right: 6px;
+    font-size: 16px;
+}
+
+#workspaces,
+#taskbar {
+    padding: 0px;
+}
+
+#custom-r_end {
+    border-radius: 0px 16px 16px 0px;
+    margin-right: 6px;
+    padding-right: 0px;
+}
+
+#custom-l_end {
+    border-radius: 16px 0px 0px 16px;
+    margin-left: 6px;
+    padding-left: 0px;
+}
+
+#custom-sr_end {
+    border-radius: 0px;
+    margin-right: 6px;
+    padding-right: 0px;
+}
+
+#custom-sl_end {
+    border-radius: 0px;
+    margin-left: 6px;
+    padding-left: 0px;
+}
+
+#custom-rr_end {
+    border-radius: 0px 5px 5px 0px;
+    margin-right: 6px;
+    padding-right: 0px;
+}
+
+#custom-rl_end {
+    border-radius: 5px 0px 0px 5px;
+    margin-left: 6px;
+    padding-left: 0px;
+}
+
+#custom-paddblue {
+    color: @blue;
+    background: transparent;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 3px;
+    padding-right: 6px;
+}
+
+#custom-paddred {
+    color: @red;
+    background: transparent;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 3px;
+    padding-right: 6px;
+}
+
+#custom-paddyellow {
+    color: @yellow;
+    background: transparent;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 3px;
+    padding-right: 6px;
+}
+
+#custom-paddgreen {
+    color: @green;
+    background: transparent;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 3px;
+    padding-right: 6px;
+}
+
+#custom-paddpywal {
+    color: @color4;
+    background: transparent;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 3px;
+    padding-right: 6px;
+}
+
+.modules-left {
+  background-color: @black;
+  padding: 0px 0px 0px 0px;
+  border-radius: 10px;
+}
+
+#window {
+  color: @white;
+  background-color: @color4;
+  padding-left: 7px;
+}
+
+.modules-right {
+  background-color: @black;
+  padding: 0px 0px 0px 0px;
+  border-radius: 10px;
+}
+
+#custom-invis {
+  color: @color4;
+  background-color: @color4;
+}
+
+#custom-cava {
+  color: @fg;
+  margin-bottom: -5;
+}
