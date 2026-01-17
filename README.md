@@ -4,7 +4,7 @@
 # requirement (Im on archlinux)
  - package installer
 ```
-sudo pacman -S git hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp noto-fonts-cjk
+sudo pacman -S git hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp noto-fonts-cjk easyeffects hyprpolkitagent xdg-desktop-portal-hyprland
 ```
 - AUR helper
 ```
@@ -17,7 +17,7 @@ yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppu
 sudo pacman -S thunar neovim htop
 ```
 ```
-yay -S spotify peaclock calcurse libsixel-git libsixel-git
+yay -S spotify peaclock calcurse libsixel-git
 ```
    - ![lazyvim](http://www.lazyvim.org/) (if you use neovim)
    - ![my custom neofetch](https://github.com/Rifqi2007c/neofetch-custom)
