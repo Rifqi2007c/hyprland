@@ -24,7 +24,9 @@ yay -S spotify peaclock calcurse libsixel-git
 - cd into ~/.config/hypr/scripts and chmod +x everything
 ```
 cd ~/.config/hypr/scripts
-chmod +x cava.sh gamemode.sh notify-send.sh powermenu.sh volume.sh wallselect.sh waybar.sh
+sudo chmod +x cava.sh gamemode.sh notify-send.sh powermenu.sh volume.sh wallselect.sh waybar.sh
+sudo chmod +x player-notification/player-notification.sh
+sudo chmod +x player-notification/player-notification-run.sh
 ```
 ## waybar pywal not work?
 pywal will not work out of the box here a way to fix this
