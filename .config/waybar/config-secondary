@@ -1,0 +1,296 @@
+
+
+{
+
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "height": 0,
+    "margin": 0,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true,
+    "output": "DP-1",
+
+
+
+	"modules-left": ["custom/invis","custom/padd","hyprland/workspaces","custom/padd","custom/m_pre","custom/m_playpause","custom/m_next","custom/padd"],
+  "modules-center": ["custom/padd","cpu","memory","disk","custom/padd","clock","custom/padd"],
+		"modules-right": ["custom/invis-s","custom/invis","custom/padd","custom/cava","custom/padd","tray","pulseaudio","custom/padd","custom/notification","custom/padd","custom/space"],
+
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "disable-scroll": true,
+        "rotate": 0,
+        "all-outputs": false,
+        "active-only": false,
+        "on-click": "activate",
+        "disable-scroll": false,
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "format-icons": {
+          "7": "[7]",
+          "8": "[8]",
+          "9": "[9]"
+          },
+        "persistent-workspaces": { "7": [], "8": [], "9":[],
+        },
+    },
+
+    "hyprland/window": {
+        "format": "> {}",
+        "max-length": 1000,
+        "rotate": 0,
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*) — mozilla firefox": "$1 󰈹 ",
+            "(.*)mozilla firefox": "> firefox 󰈹 ",
+            "(.*) - visual studio code": "$1 󰨞 ",
+            "(.*)visual studio code": "> code 󰨞 ",
+            "(.*) — dolphin": "> $1 󰉋 ",
+            "(.*)spotify": "> spotify 󰓇 ",
+            "(.*)steam": "> steam 󰓓 "
+        },
+    },
+
+    "custom/power": {
+        "format": "",
+        "rotate": 0,
+        "exec": "echo ; echo  logout",
+        "on-click": "~/.config/hypr/scripts/powermenu.sh",
+        "on-click-right": "killall rofi",
+        "interval" : 86400, // once every day
+        "tooltip": true
+    },
+
+
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"rotate": 0,
+		"icon-size": 18,
+		"icon-theme": "Tela-circle-dracula",
+        "spacing": 0,
+		"tooltip-format": "{title}",
+		"on-click": "activate",
+		"on-click-middle": "close",
+		"ignore-list": [
+			"Alacritty"
+		],
+		"app_ids-mapping": {
+			"firefoxdeveloperedition": "firefox-developer-edition"
+		}
+	},
+
+    "custom/updates": {
+        "exec": "systemupdate.sh",
+        "return-type": "json",
+        "format": "{}",
+        "rotate": 0,
+        "on-click": "hyprctl dispatch exec 'systemupdate.sh up'",
+        "interval": 86400, // once every day
+        "tooltip": true,
+        "signal": 20,
+    },
+
+
+    "custom/m_pre": {
+        "format": "󰒮",
+        "on-click": "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+      },
+
+      "custom/m_playpause": {
+          "format": "",
+          "on-click": "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+        },
+
+        "custom/m_next": {
+            "format": "󰒭",
+            "on-click": "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+          },
+
+
+    "clock": {
+        "format": " {:%I:%M 󰃭 %d·%m·%y}",
+        "rotate": 0,
+        "format-alt": " {:%I:%M %p}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "rotate": 0,
+        "spacing": 5
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "rotate": 0,
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}",
+        "rotate": 0,
+        "format-muted": "婢",
+        "on-click": "pavucontrol",
+        "on-click-middle": "pactl -- set-sink-volume 0 0%",
+        "on-scroll-up": "pactl -- set-sink-volume 0 +5%",
+        "on-scroll-down": "pactl -- set-sink-volume 0 -5%",
+        "tooltip-format": "{icon} {desc} // {volume}%",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "rotate": 0,
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "pavucontrol -t 4",
+        "on-click-middle": "volumecontrol.sh -i m",
+        "on-scroll-up": "volumecontrol.sh -i i",
+        "on-scroll-down": "volumecontrol.sh -i d",
+        "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
+        "scroll-step": 5
+    },
+
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛 {usage}%",
+        "rotate": 0,
+        "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+
+    "memory": {
+        "states": {
+            "c": 90, // critical
+            "h": 60, // high
+            "m": 30, // medium
+        },
+        "interval": 30,
+        "format": "󰾆 {percentage}%",
+        "rotate": 0,
+        "format-m": "󰾅 {percentage}%",
+        "format-h": "󰓅 {percentage}%",
+        "format-c": " {percentage}%",
+        "format-alt": "󰾆 {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
+    },
+
+ 
+    "disk": {
+    "interval": 30,
+    "format": " {percentage_free}%",
+    "path": "/"
+    },
+
+"custom/cava": {
+    "exec": "sleep 0.1 && ~/.config/waybar/scripts/cava.sh"},
+
+"custom/notification": {
+    "format": "",
+    "on-click": "swaync-client -t -sw",
+    "escape": true
+  },
+
+// modules for padding //
+
+    "custom/l_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/r_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/sl_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/sr_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/rl_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/rr_end": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/padd": {
+        "format": "|",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+      "custom/space": {
+          "format": " ",
+          "interval": "once",
+          "tooltip": false
+        },
+
+    "custom/invis": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+      },
+    "custom/invis-s": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+      }
+}

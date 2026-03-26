@@ -1,0 +1,7 @@
+include ~/.cache/wal/colors-kitty.conf
+
+font_family family="0xProto Nerd Font"
+font_size 13.0
+
+window_padding_width 10
+window_padding_height 10
