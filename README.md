@@ -4,11 +4,11 @@
 # requirement (Im on archlinux)
  - package installer
 ```
-sudo pacman -S git hyprland waybar network-manager-applet dunst rofi pavucontrol imagemagick fish nwg-look foot ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp noto-fonts-cjk easyeffects hyprpolkitagent xdg-desktop-portal-hyprland
+sudo pacman -S git hyprland waybar network-manager-applet swaync rofi pavucontrol imagemagick fish nwg-look kitty ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp noto-fonts-cjk hyprpolkitagent xdg-desktop-portal-hyprland swww cava vimix-cursors
 ```
 - AUR helper
 ```
-yay -S swww cava ttf-0xproto vimix-cursors tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
+yay -S ttf-0xproto tela-circle-icon-theme-dracula catppuccin-gtk-theme-macchiato
 ```
 - sttt https://github.com/flick0/sttt
  - set fish as default shell
