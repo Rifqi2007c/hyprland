@@ -4,58 +4,54 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-    "height": 10,
-    "margin": 6,
+    "height": 0,
+    "margin": 0,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
 
 
-
-	"modules-left": ["custom/space","custom/paddblue","custom/l_end","hyprland/workspaces","custom/r_end","custom/paddblue","custom/l_end","custom/m_pre","custom/m_playpause","custom/m_next","custom/r_end","custom/paddpywal","custom/space","hyprland/window"],
-		"modules-right": ["custom/invis","custom/space","custom/paddpywal","custom/l_end","cpu","memory","disk","custom/r_end","custom/paddred","custom/l_end","custom/cava","custom/r_end","custom/paddyellow","custom/l_end","clock","custom/r_end","custom/paddgreen","custom/l_end","tray","pulseaudio","custom/r_end","custom/paddblue","custom/l_end","custom/power","custom/r_end","custom/paddblue","custom/space"],
-
-
+	"modules-left": ["custom/l_end","custom/padd","battery","custom/padd","hyprland/workspaces","custom/padd","custom/m_pre","custom/m_playpause","custom/m_next","custom/padd","custom/space","hyprland/window"],
+		"modules-right": ["custom/invis","custom/space","custom/padd","cpu","memory","disk","custom/padd","custom/cava","custom/padd","clock","custom/padd","tray","pulseaudio","custom/padd","custom/power","custom/notification","custom/padd","custom/space"],
 
 
     "hyprland/workspaces": {
         "format": "{icon}",
         "disable-scroll": true,
         "rotate": 0,
-        "all-outputs": true,
+        "all-outputs": false,
         "active-only": false,
         "on-click": "activate",
         "disable-scroll": false,
         "on-scroll-up": "hyprctl dispatch workspace -1",
         "on-scroll-down": "hyprctl dispatch workspace +1",
         "format-icons": {
-          "1": "󰮯",
-          "2": "",
-          "3": "󱁂",
-          "4": "",
-          "5": "󰊠",
-          "6": "󰊠"
+          "1": "[1]",
+          "2": "[2]",
+          "3": "[3]",
+          "4": "[4]",
+          "5": "[5]",
+          "6": "[6]"
           },
         "persistent-workspaces": { "1": [], "2": [], "3": [], "4": [], "5": [], "6": [],
-        }
+        },
     },
 
     "hyprland/window": {
         "format": "> {}",
+        "max-length": 1000,
         "rotate": 0,
         "separate-outputs": true,
         "rewrite": {
-            "${USER}@${set_sysname}:(.*)": "$1  ",
-            "(.*) — Mozilla Firefox": "$1 󰈹 ",
-            "(.*)Mozilla Firefox": "> Firefox 󰈹 ",
-            "(.*) - Visual Studio Code": "$1 󰨞 ",
-            "(.*)Visual Studio Code": "> Code 󰨞 ",
-            "(.*) — Dolphin": "> $1 󰉋 ",
-            "(.*)Spotify": "> Spotify 󰓇 ",
-            "(.*)Steam": "> Steam 󰓓 "
+            "(.*) — mozilla firefox": "$1 󰈹 ",
+            "(.*)mozilla firefox": "> firefox 󰈹 ",
+            "(.*) - visual studio code": "$1 󰨞 ",
+            "(.*)visual studio code": "> code 󰨞 ",
+            "(.*) — dolphin": "> $1 󰉋 ",
+            "(.*)spotify": "> spotify 󰓇 ",
+            "(.*)steam": "> steam 󰓓 "
         },
-        "max-length": 200
     },
 
     "custom/power": {
@@ -63,6 +59,7 @@
         "rotate": 0,
         "exec": "echo ; echo  logout",
         "on-click": "~/.config/hypr/scripts/powermenu.sh",
+        "on-click-right": "killall rofi",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -114,9 +111,9 @@
 
 
     "clock": {
-        "format": " {:%I:%M %p}",
+        "format": " {:%I:%M 󰃭 %d·%m·%y}",
         "rotate": 0,
-        "format-alt": " {:%R 󰃭 %d·%m·%y}",
+        "format-alt": " {:%I:%M %p}",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
@@ -229,6 +226,12 @@
 "custom/cava": {
     "exec": "sleep 0.1 && ~/.config/waybar/scripts/cava.sh"},
 
+"custom/notification": {
+    "format": "",
+    "on-click": "swaync-client -t -sw",
+    "escape": true
+  },
+
 // modules for padding //
 
     "custom/l_end": {
@@ -267,29 +270,11 @@
         "tooltip": false
     },
 
-    "custom/paddred": {
-        "format": "",
+    "custom/padd": {
+        "format": "|",
         "interval" : "once",
         "tooltip": false
     },
-
-    "custom/paddyellow": {
-        "format": "",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/paddgreen": {
-        "format": "",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/paddblue": {
-        "format": "",
-        "interval": "once",
-        "tooltip": false
-      },
 
       "custom/space": {
           "format": " ",
@@ -298,15 +283,8 @@
         },
 
     "custom/invis": {
-        "format": "",
-        "interval": "once",
-        "tooltip": false
-      },
-
-    "custom/paddpywal": {
-        "format": "",
+        "format": "|",
         "interval": "once",
         "tooltip": false
       }
-
 }

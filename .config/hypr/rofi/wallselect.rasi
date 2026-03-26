@@ -12,6 +12,7 @@ configuration {
 }
 
 @import "~/.config/hypr/rofi/colors.rasi"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
 
 //----- Main Window -----//
 
@@ -34,7 +35,7 @@ window {
 mainbox {
     enabled:                     true;
     children:                    [ "listview" ];
-    background-color:            @bg;
+    background-color:            @background;
 }
 
 //----- Listview -----//
@@ -77,7 +78,7 @@ element {
 }
 
 element selected.normal {
-    background-color:            @blue;
+    background-color:            @color4;
     text-color:                  @bg;
 }
 

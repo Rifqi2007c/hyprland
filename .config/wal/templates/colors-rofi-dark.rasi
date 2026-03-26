@@ -1,5 +1,6 @@
 * {{
-    background: {color4};
-
+    background: {color0};
+    foreground: {color5};
+    color4: {color4};
 }}
 

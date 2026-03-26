@@ -3,41 +3,35 @@
     border-radius: 0px;
     font-family: "0xProto Nerd Font";
     font-weight: bold;
-    font-size: 13px;
-    min-height: 16px;
+    font-size: 16px;
+    min-height: 20px;
 }
 
-@import "color.css";
 @import url('file:///home/rifqi/.cache/wal/colors-waybar.css');
 
 window#waybar {
-    background: @color4;
-    border-radius: 14px;
+    background: alpha(@background, 0.8);
+    border-bottom: solid 2px @color4;
+    margin-right: 20px;
 }
 
+
 tooltip {
-    background: @bg;
-    color: @fg;
+    background: @background;
+    color: @color4;
+    border: solid 2px @color4;
     border-radius: 5px;
-    border-width: 0px;
 }
 
 #workspaces button {
-    box-shadow: none;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-right: 3;
-    color: #d6d1ff;
+    color: alpha(@foreground, 0.6);
     animation: ws_normal 20s ease-in-out 1;
+    margin: -6px;
+    margin-bottom: -3px;
 }
 
 #workspaces button.active {
-    background: linear-gradient(45deg, rgba(202,158,230,1) 0%, rgba(245,194,231,1) 43%, rgba(180,190,254,1) 80%, rgba(137,180,250,1) 100%);
-    color: @bg;
-    padding-left: 5px;
-    padding-right: 10px;
-    margin-bottom: 3px;
+    color: @color6;
     animation: ws_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -45,7 +39,6 @@ tooltip {
 #workspaces button:hover {
     background: @wb-hvr-bg;
     color: @wb-hvr-fg;
-    margin-bottom: 5px;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -84,13 +77,14 @@ tooltip {
 }
 
 #tray menu * {
-    min-height: 16px
+    min-height: 16px;
+    margin-bottom: 1px;
 }
 
 #tray menu separator {
-    min-height: 10px
+    min-height: 10px;
+    margin-bottom: 10px;
 }
-
 
 #backlight,
 #battery,
@@ -106,7 +100,6 @@ tooltip {
 #memory,
 #mpris,
 #network,
-#custom-notifications,
 #pulseaudio,
 #custom-spotify,
 #taskbar,
@@ -121,9 +114,8 @@ tooltip {
 #custom-sl_end,
 #custom-sr_end,
 #custom-rl_end,
-#custom-rr_end {
-    color: @fg;
-    background: @bg;
+#custom-rr_end,
+#custom-notification {
     opacity: 1;
     margin: 3px 0px 3px 0px;
     padding-left: 3px;
@@ -132,55 +124,59 @@ tooltip {
 
 
 #disk {
-  color: @magenta
+  color: @color5;
+  margin-bottom: 5px;
 }
 
 #cpu {
-  color: @cyan;
+  color: @color5;
+  margin-bottom: 5px;
 }
 
 #clock {
-  color: @cyan;
+  color: @color6;
+  margin-bottom: 5px;
 }
 
 #memory {
-  color: @yellow;
+  color: @color5;
+  margin-bottom: 5px;
 }
 
 #custom-m_playpause {
-  color: @green;
+  color: @color5;
   background: @bg;
   padding-right: 7px;
   padding-left: 5px;
-  margin: 3px 0px 3px 0px;
+  margin: 3px 0px 6px 0px;
   font-size: 15px;
 }
 
 #custom-m_next {
-    color: @green;
+    color: @color5;
     background: @bg;
     opacity: 1;
-    margin: 3px 0px 3px 0px;
+    margin: 3px 0px 6px 0px;
     padding-left: 6px;
     padding-right: 6px;
     font-size: 16px;
 }
 
 #custom-m_pre {
-    color: @green;
+    color: @color5;
     background: @bg;
     opacity: 1;
-    margin: 3px 0px 3px 0px;
+    margin: 3px 0px 6px 0px;
     padding-left: 2px;
     padding-right: 2px;
     font-size: 16px;
 }
 
 #custom-power {
-    color: @red;
+    color: #f05b5b;
     background: @bg;
     opacity: 1;
-    margin: 3px 0px 3px 0px;
+    margin: 3px 0px 5px 0px;
     padding-left: 5px;
     padding-right: 10px;
     font-size: 14px;
@@ -195,11 +191,6 @@ tooltip {
     padding-left: 3px;
     padding-right: 6px;
     font-size: 16px;
-}
-
-#workspaces,
-#taskbar {
-    padding: 0px;
 }
 
 #custom-r_end {
@@ -241,72 +232,52 @@ tooltip {
 #custom-paddblue {
     color: @blue;
     background: transparent;
-    opacity: 1;
-    margin: 3px 0px 3px 0px;
+    margin-bottom: 4px;
     padding-left: 3px;
     padding-right: 6px;
 }
 
-#custom-paddred {
-    color: @red;
-    background: transparent;
-    opacity: 1;
-    margin: 3px 0px 3px 0px;
-    padding-left: 3px;
-    padding-right: 6px;
-}
-
-#custom-paddyellow {
-    color: @yellow;
-    background: transparent;
-    opacity: 1;
-    margin: 3px 0px 3px 0px;
-    padding-left: 3px;
-    padding-right: 6px;
-}
-
-#custom-paddgreen {
-    color: @green;
-    background: transparent;
-    opacity: 1;
-    margin: 3px 0px 3px 0px;
-    padding-left: 3px;
-    padding-right: 6px;
-}
-
-#custom-paddpywal {
+#custom-padd {
     color: @color4;
     background: transparent;
-    opacity: 1;
-    margin: 3px 0px 3px 0px;
+    margin-bottom: 4px;
     padding-left: 3px;
     padding-right: 6px;
 }
 
 .modules-left {
-  background-color: @black;
-  padding: 0px 0px 0px 0px;
-  border-radius: 10px;
+  padding: 0px 0px 0px 0px
 }
 
 #window {
-  color: @white;
-  background-color: @color4;
-  padding-left: 7px;
+  color: #fca051;
+  padding-left: 1px;
+  margin-bottom: 3px;
 }
 
 .modules-right {
-  background-color: @black;
   padding: 0px 0px 0px 0px;
-  border-radius: 10px;
 }
 
 #custom-invis {
-  color: @color4;
-  background-color: @color4;
+  color: transparent;
+  background-color: transparent;
+}
+
+#custom-invis-s {
+  color: transparent;
+  background-color: transparent;
+  padding-left: 30px;
 }
 
 #custom-cava {
-  color: @fg;
-  margin-bottom: -5;
+  color: @color5;
+  margin-bottom: 5px;
+}
+
+#custom-notification {
+  color: @color6;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 13px;
 }

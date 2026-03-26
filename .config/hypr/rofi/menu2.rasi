@@ -28,8 +28,11 @@ window {
 	width: 600px;
 	height: 300px;
 	padding: 0;
+  border: 0;
+  border-color: @color4;
+  border-radius: 9px;
 	background-color: @background;
-	x-offset:   -270px;        
+	x-offset:   -200px;        
 	y-offset:   -348px;
 }
 
@@ -41,11 +44,10 @@ mainbox {
 
 listview {
 	scrollbar: false;
-	padding: 2 0;
+	padding: 10 0;
 	background-color: @background;
 	columns: 1;
 	lines: 7;
-	margin: 8 0 0 0;
 }
 
 
@@ -54,21 +56,22 @@ inputbar {
 	background-color: @background;
 	border-radius: 0;
 	margin: 0;
+  padding: 2 0;
 }
 
 prompt {
 	enabled: true;
 	font: "0xProto Bold 11";
 	background-color: @background;
-	text-color: @white;
+	text-color: @foreground;
 	padding: 0;
 
 }
 
 entry {
 	background-color: transparent;
-	text-color: @white;
-	placeholder-color: @white;
+	text-color: @foreground;
+	placeholder-color: @foreground;
 	border-radius: 0;
 	placeholder: "Run >";
 	blink: false;
@@ -76,7 +79,7 @@ entry {
 }
 
 element {
-	background-color: @white;
+	background-color: @foreground;
 	padding: 10;
 	border-radius: 10;
 }
@@ -97,7 +100,7 @@ element-icon {
 
 element.normal.normal {
 	background-color: @background;
-	text-color: @white;
+	text-color: @foreground;
 }
 element.normal.urgent {
 	background-color: @gr;
@@ -109,7 +112,7 @@ element.normal.active {
 }
 element.selected.normal {
 	background-color: @gr;
-	text-color: @bg;
+	text-color: @background;
 }
 element.selected.urgent {
 	background-color: @gr;
@@ -121,7 +124,7 @@ element.selected.active {
 }
 element.alternate.normal {
 	background-color: @background;
-	text-color: @white;
+	text-color: @foreground;
 }
 element.alternate.urgent {
 	background-color: @gr;

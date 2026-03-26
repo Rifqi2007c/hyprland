@@ -1,8 +1,8 @@
 #! /bin/sh
 
 rofi_cmd() {
-  rofi -dmenu \
-    -theme ~/.config/hypr/rofi/powermenu.rasi -x11
+  rofi -dmenu -normal-winow -p "power" -x11 \
+    -theme ~/.config/hypr/rofi/powermenu.rasi
 }
 
 chosen=$(printf "      \n⏻Shutdown\n󰜉Reboot\n󰗼Logout\n" | rofi_cmd)
