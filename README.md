@@ -4,7 +4,7 @@
 # requirement (Im on archlinux)
  - package installer
 ```
-sudo pacman -S git hyprland waybar network-manager-applet swaync rofi pavucontrol imagemagick fish nwg-look kitty ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp noto-fonts-cjk hyprpolkitagent xdg-desktop-portal-hyprland swww cava vimix-cursors
+sudo pacman -S git hyprland waybar network-manager-applet swaync rofi pavucontrol imagemagick fish nwg-look kitty ttf-nerd-fonts-symbols ttf-0xproto-nerd libnotify starship python-pywal grim slurp noto-fonts-cjk hyprpolkitagent xdg-desktop-portal-hyprland awww cava vimix-cursors
 ```
 - AUR helper
 ```
