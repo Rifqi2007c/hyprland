@@ -1,5 +1,5 @@
 # Preview
-![alt text](https://github.com/Rifqi2007c/hyprland/blob/main/asset/20240702_22h52m26s_grim.png)
+![alt text](https://github.com/Rifqi2007c/hyprland/blob/main/screenshot_09062026_222932.png)
 
 # requirement (Im on archlinux)
  - package installer
