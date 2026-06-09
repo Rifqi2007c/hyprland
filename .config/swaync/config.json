@@ -77,11 +77,11 @@
       "actions": [
         {
           "label": "+ 󰃠",
-          "command": "brightnessctl set 10%+"
+          "command": "~/.config/swaync/brightness.sh -p"
         },
         {
           "label": "- 󰃠",
-          "command": "brightnessctl set 10%-"
+          "command": "~/.config/swaync/brightness.sh -d"
         },
         {
           "label": "",

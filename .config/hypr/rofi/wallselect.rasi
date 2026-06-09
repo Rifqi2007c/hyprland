@@ -4,7 +4,7 @@ configuration {
     modi:                        "drun";
     show-icons:                  true;
     drun-display-format:         "{name}";
-    font:                        "0xProto Bold 11";
+    font:                        "0xProto Nerd Font Bold 11";
     
   hover-select:				 true;
 	me-select-entry:			 "MousePrimary";

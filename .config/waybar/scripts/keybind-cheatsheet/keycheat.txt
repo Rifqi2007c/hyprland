@@ -1,0 +1,18 @@
+terminal: SUPER + ENTER
+drun/run app: SUPER + D
+kill window: SUPER + Q
+switch workspace: SUPER + {0-9}
+switch workspace (mouse): SUPER + {scroll_up_or_down}
+move window to workspace: SUPER + SHIFT + {0-9}
+move window around (mouse): SUPER + left_click
+resize window (mouse): SUPER + right_click
+screenshot: SUPER + CTRL + S
+change window focus: SUPER + {any_arrow_key}
+fullscreen window: SUPER + F
+float window: SUPER + V
+psedo window: SUPER + P
+toggle window split: SUPER + J
+open special workspace (scratchpad): SUPER + S
+move window to special workspace (scratcpad): SUPER + SHIFT + S
+
+NOTE: working laptop keybind: brightness, volume(up, down, mute)

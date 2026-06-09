@@ -143,6 +143,14 @@ tooltip {
   margin-bottom: 5px;
 }
 
+#pulseaudio {
+  color: @color5;
+}
+
+#battery {
+  color: @color6;
+}
+
 #custom-m_playpause {
   color: @color5;
   background: @bg;

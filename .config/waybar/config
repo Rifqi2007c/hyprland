@@ -13,7 +13,7 @@
 
 
 	"modules-left": ["custom/l_end","custom/padd","battery","custom/padd","hyprland/workspaces","custom/padd","custom/m_pre","custom/m_playpause","custom/m_next","custom/padd","custom/space","hyprland/window"],
-		"modules-right": ["custom/invis","custom/space","custom/padd","cpu","memory","disk","custom/padd","custom/cava","custom/padd","clock","custom/padd","tray","pulseaudio","custom/padd","custom/power","custom/notification","custom/padd","custom/space"],
+		"modules-right": ["custom/padd","custom/cava","custom/padd","custom/keycheatsheet","custom/padd","cpu","memory","disk","custom/padd","clock","custom/padd","tray","pulseaudio","custom/padd","custom/power","custom/notification","custom/padd","custom/space"],
 
 
     "hyprland/workspaces": {
@@ -158,11 +158,11 @@
     "pulseaudio": {
         "format": "{icon} {volume}",
         "rotate": 0,
-        "format-muted": "婢",
+        "format-muted": " muted",
         "on-click": "pavucontrol",
-        "on-click-middle": "pactl -- set-sink-volume 0 0%",
-        "on-scroll-up": "pactl -- set-sink-volume 0 +5%",
-        "on-scroll-down": "pactl -- set-sink-volume 0 -5%",
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
         "format-icons": {
@@ -176,7 +176,7 @@
         }
     },
 
-    "pulseaudio#microphone": {
+    "pulsewire#microphone": {
         "format": "{format_source}",
         "rotate": 0,
         "format-source": "",
@@ -219,7 +219,7 @@
  
     "disk": {
     "interval": 30,
-    "format": " {percentage_free}%",
+    "format": " {percentage_used}%",
     "path": "/"
     },
 
@@ -231,6 +231,12 @@
     "on-click": "swaync-client -t -sw",
     "escape": true
   },
+
+"custom/keycheatsheet": {
+    "format": " ",
+    "on-click": "~/.config/waybar/scripts/keybind-cheatsheet/keycheat.sh",
+    "escape": true
+},
 
 // modules for padding //
 

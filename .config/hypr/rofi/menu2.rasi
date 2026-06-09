@@ -13,7 +13,7 @@ configuration {
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
-	font: "0xProto Bold 12";
+	font: "0xProto Nerd Font Bold 12";
 
 	background-color: @gr;
 	separatorcolor: transparent;
@@ -44,7 +44,7 @@ mainbox {
 
 listview {
 	scrollbar: false;
-	padding: 10 0;
+	padding: 4 0;
 	background-color: @background;
 	columns: 1;
 	lines: 7;
@@ -61,7 +61,7 @@ inputbar {
 
 prompt {
 	enabled: true;
-	font: "0xProto Bold 11";
+	font: "0xProto Nerd Font Bold 11";
 	background-color: @background;
 	text-color: @foreground;
 	padding: 0;

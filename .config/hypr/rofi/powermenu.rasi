@@ -27,8 +27,8 @@ window {
 	width: 188px;
 	height: 190px;
 	border-radius: 9;
-	border: 2;
-  border-color: @color4;
+	//border: 2;
+  //border-color: @color4;
 	padding: 10;
 	background-color: @background;
 	x-offset:   856px;        

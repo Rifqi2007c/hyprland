@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # Function to display the notification
 
